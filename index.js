@@ -32,5 +32,17 @@ fetch(URL)
 	})
 
 search = () => {
-	
+	let input,filter,ul,li,span,i;
+		input = document.getElementById('movieInput');
+		filter = input.value.toUpperCase();
+		ul = document.getElementsByTagName('ul');
+		li = document.getElementsByTagName('li')
+			for (i = 0; i < li.length; i++) {
+				span = li[i].getElementsByTagName("span")[0];
+				if(span.textContent.toUpperCase().indexOf(filter) > -1) {
+					li[i].style.display = "block";
+				} else {
+					li[i].style.display = "none";
+				}
+			}
 }
