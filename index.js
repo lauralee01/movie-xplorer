@@ -23,7 +23,7 @@ fetch(URL)
 				span = createNode('span');
 				img.src = `https://image.tmdb.org/t/p/w185/${tvshow.poster_path}`;
 				console.log(img.src)
-			span.innerHTML = `<br>Name - ${tvshow.original_name}<br> Overview - ${tvshow.overview}<br> First Air-Date - ${tvshow.first_air_date}<br> Vote Average ${tvshow.vote_average}`;
+			span.innerHTML = `<br>Name -${tvshow.original_name}<br> Overview - ${tvshow.overview.slice(0, 500)}<br> First Air-Date - ${tvshow.first_air_date}<br> Vote Average ${tvshow.vote_average}`;
 			append(li, img);
 			append(li, span);
 			append(ul, li);
@@ -31,3 +31,6 @@ fetch(URL)
 
 	})
 
+search = () => {
+	
+}
