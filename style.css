@@ -1,7 +1,11 @@
 * {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
 	background-color: #000;
 }
 ul {
@@ -13,7 +17,7 @@ ul {
 	list-style-type: none;
 }
 .header-container {
-	
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 }
@@ -32,10 +36,12 @@ span {
 }
 img {
 	margin-top: 10px;
+	height: auto;
+	max-width: 100%;
 }
 li {
 	width: 30%;
-	height: 610px;
+	height: 620px;
 	display: inline;
 	margin: 10px;
 	float: left;
@@ -51,4 +57,98 @@ li {
 	font-family: 'Sedgwick Ave Display', cursive;
 	box-shadow: 5px 5px 5px 5px;
 	border-radius: 10px 5px;
+	margin: 10px;
+}
+@media (min-width: 320px) and 
+	 (max-width: 600px) {
+	 body {
+		background-color: #000;
+		width: 100%;
+		max-width: 1000px;
+		margin: 5px auto;
+	}
+	.header-brand {
+		font-size: 18px;
+		margin: 5px;
+	}
+	#movieInput {
+		font-size: 12px;
+		margin-right: 5px;
+	}
+	ul {
+		width: 100%;
+		margin: 5px auto;
+	}
+	img {
+		height: auto;
+		max-width: 100%;
+	}
+	li {
+		height: 840px;
+		margin: 5px;
+		
+	}
+	span {
+		font-size: 10px;
+	}
+}
+@media (min-width: 605px) and 
+		(max-width: 800px) {
+		body {
+			background-color: #000;
+			width: 100%;
+			max-width: 1000px;
+			margin: 10px auto;
+		}
+		.header-brand {
+			font-size: 30px;
+			margin: 5px;
+		}
+		#movieInput {
+			font-size: 18px;
+			margin-right: 5px;
+		}
+		ul {
+			width: 100%;
+			text-align: center;
+			margin: 5px;
+		}
+		img {
+			height: auto;
+			max-width: 100%;
+		}
+		li {
+			height: 700px;
+			margin: 10px;
+		}
+		span {
+			font-size: 10px;
+		}	
+}
+@media (max-width: 1024px)  {
+	 body {
+		background-color: #000;
+		width: 100%;
+		max-width: 1000px;
+		margin: 10px auto;
+	}
+	.header-brand {
+		font-size: 30px;
+		padding-left: 5px;
+		margin: 5px;
+	}
+	img{
+		height: auto;
+		max-width: 100%;
+	}
+	#movieInput {
+		font-size: 12px;
+	}
+	li {
+		height: 800px;
+	}
+	span {
+		font-size: 18px;
+	}
+
 }
